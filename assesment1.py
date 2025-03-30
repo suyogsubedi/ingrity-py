@@ -55,11 +55,14 @@ uniqueSuppliers = len(pd.unique(df["Supplier"]))
 print("These are the unique suppliers", uniqueSuppliers)
 
 # Collections Question
-
 # Using collections.Counter:
 # Count occurrences of each category using Counter
 categoryCounts = Counter(df["Category"])
 print("Category occurrences:", dict(categoryCounts))
   
 # Find the most common category.
+category_counts = Counter(df["Category"])
+most_common_category = category_counts.most_common(1)[0][0] #most common category getting the first tuple
+print("The most common category is ", most_common_category)
+
 
